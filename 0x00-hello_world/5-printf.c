@@ -7,8 +7,8 @@
 
 int main(void)
 {
-	char puzzle[] = "with proper grammar, but the outcome is a piece of art,\n";
+	char puzzle[] = "with proper grammar, but the outcome is a piece of art,";
 
-	puts(puzzle);
+	printf("%s\n", puzzle);
 	return (0);
 }
