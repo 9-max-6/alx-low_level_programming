@@ -11,12 +11,12 @@ void print_rev(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		;
+		s++;
 	}
 	i++;
 	for (j = i; j !=0; j--)
 	{
-		_putchar(s);
+		_putchar(*s);
 		s--;
 	}
 }
