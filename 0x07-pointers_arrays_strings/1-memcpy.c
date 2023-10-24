@@ -21,7 +21,7 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 		return (NULL);
 	}
 
-	while(src[i] != '\0' && i < n)
+	while (i < n)
 	{
 		if (dest[i] == NULL)
 		{
@@ -31,6 +31,7 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 		{
 			dest[i] = src[i];
 		}
+		i++;
 	}
 
 	return (dest);
