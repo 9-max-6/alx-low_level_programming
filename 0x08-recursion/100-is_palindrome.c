@@ -11,7 +11,7 @@ int _strlen_recursion(char *s);
  * Return: 1 if it is or 0 otherwise
  */
 
-int is_palindrome(char *s);
+int is_palindrome(char *s)
 {
 	if (*s == 0)
 		return (1);
