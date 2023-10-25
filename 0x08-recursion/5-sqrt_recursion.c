@@ -11,7 +11,7 @@ int _sqrt_helper(int n, int i);
  * square root: -1 : the square root
  */
 
-int _sqrt_recursion(int n);
+int _sqrt_recursion(int n)
 {
 	if (n < 0)
 	{
