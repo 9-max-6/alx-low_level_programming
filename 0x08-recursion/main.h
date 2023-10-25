@@ -1,10 +1,10 @@
-#ifndef
-#define
+#ifndef __MAIN__
+#define __MAIN__
 
 #include <stdio.h>
 #include <unistd.h>
 
-void _putchar(char s);
+int _putchar(char c);
 void _puts_recursion(char *s);
 void _print_rev_recursion(char *s);
 int _strlen_recursion(char *s);
