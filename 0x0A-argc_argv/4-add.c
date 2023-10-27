@@ -63,20 +63,24 @@ int is_num(char *s)
 
 int main(int argc, char *argv[])
 {
-	int i, sum;
+	int i, sum, temp;
 	
 	sum = 0;
 	for (i = 0; i < argc; i++)
 	{
 		if (is_num(argv[i]) == -1)
 		{
-			print("Error\n");
+			printf("Error\n");
 		}
 	}
 	
 	for (i = 0; i < argc; i++)
 	{
-		sum += _atoi(argv[i]);
+		temp = _atoi(argv[i]);
+		if (temp >= 0)
+		{
+			sum += temp;
+		}
 	}
 	printf("%d\n", sum);
 	return (0);
