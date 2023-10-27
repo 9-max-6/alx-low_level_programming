@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <unistd.h>
 
 /**
  * _putchar - a function to write a character to
@@ -22,11 +22,16 @@ int _putchar(char c)
  * Return: returns 0
  */
 
-int main(int argc, char *argv[])
+int main(__attribute__((unused))int argc, char *argv[])
 {
-	while (**argv != '\0')
+
+	int i;
+	i = 0;
+	while (argv[0][i] != '\0')
 	{
-		_putchar(**argv);
+		_putchar(argv[0][i]);
+		i++;
+		
 	}
 	_putchar('\n');
 
