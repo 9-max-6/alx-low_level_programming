@@ -67,7 +67,7 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL && s2 == NULL)
 	{
 		arr = malloc(1);
-		arr = '\0';
+		arr[0] = '\0';
 		return arr;
 	}
 	for (i = 0; s1[i] != '\0'; i++)
