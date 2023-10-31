@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * allo_grid - a function to return a pointer to 2d array
+ * alloc_grid - a function to return a pointer to 2d array
  * @height: height of the grid
  * @width: width of the grid.
  *
@@ -24,6 +24,7 @@ int **alloc_grid(int width, int height)
 		grid[i] = malloc(sizeof(int) * width);
 		if (!grid[i])
 		{
+			be_free(g, i);
 			return (NULL);
 		}
 		for (j = 0; j < width; j++)
@@ -35,3 +36,24 @@ int **alloc_grid(int width, int height)
 	return (grid);
 }
 
+/**
+ * be_free - a function to free a grid.
+ * @grid: pointer to the grid.
+ * @i: the height of the grid.
+ */
+
+void be_free(int **grid, int i)
+{
+	int height;
+
+	if (i == 0)
+	{
+		return;
+	}
+	for (height = 0; height < i; height++)
+	{
+		free(grid[height]);
+	}
+
+	free(g);
+}
