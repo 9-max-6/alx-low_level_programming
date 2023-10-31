@@ -3,13 +3,13 @@
 /**
  * _strlen - a function determine the length of a string
  * @str: pointer to the string.
- * 
+ *
  * Return: returns the length of the string or NULL
  */
 
 int _strlen(char *str)
 {
-	int j; 
+	int j;
 
 	if (!str)
 	{
@@ -33,14 +33,14 @@ char *sing_str(char *str)
 
 	j = _strlen(str);
 	new_str =  malloc(sizeof(char) * (j + 1));
-	
+
 	for (i = 0; i < j; i++)
 	{
 		new_str[i] = str[i];
 	}
 
 	return (new_str);
-}	
+}
 
 /**
  * str_concat - a function to concatenate two strings.
@@ -53,22 +53,17 @@ char *sing_str(char *str)
 char *str_concat(char *s1, char *s2)
 {
 	char *arr;
-	unsigned int i, j;
-	unsigned int size;
+	unsigned int i, j, size;
 
 	if (s2 == NULL && s1 != NULL)
-	{
 		return (sing_str(s1));
-	}
 	if (s2 != NULL && s1 == NULL)
-	{
 		return (sing_str(s2));
-	}
 	if (s1 == NULL && s2 == NULL)
 	{
 		arr = malloc(1);
 		arr[0] = '\0';
-		return arr;
+		return (arr);
 	}
 	for (i = 0; s1[i] != '\0'; i++)
 		;
@@ -82,9 +77,7 @@ char *str_concat(char *s1, char *s2)
 	arr = malloc(sizeof(char) * (size + 1));
 
 	if (!arr)
-	{
 		return (NULL);
-	}
 	for (i = 0; s1[i] != '\0'; i++)
 	{
 		arr[i] = s1[i];
@@ -94,9 +87,7 @@ char *str_concat(char *s1, char *s2)
 		arr[i] = s2[j];
 		i++;
 	}
-
 	arr[i] = '\0';
-
 	return (arr);
 }
 
