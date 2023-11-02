@@ -19,7 +19,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	marr = malloc(sizeof(size) * nmemb);
+	marr = malloc(size * nmemb);
 	if (!marr)
 	{
 		return (NULL);
