@@ -1,6 +1,7 @@
 #ifndef __main__
 #define __main__
 
+#include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
 
