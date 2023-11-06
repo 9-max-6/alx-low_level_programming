@@ -18,7 +18,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *nae;
 	char *ownr;
 	int i, j;
-
+	
+	if (!name || !owner )
+		return (NULL);
 	for (i = 0; name[i] != '\0'; i++)
 		;
 	nae = malloc(i + 1);
