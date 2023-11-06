@@ -1,5 +1,6 @@
 #include "dog.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * new_dog - a function to make a new struct of type
@@ -18,28 +19,24 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *nae;
 	char *ownr;
 	int i, j;
-	
-	if (!name || !owner )
+
+	if (!name || !owner)
 		return (NULL);
 	for (i = 0; name[i] != '\0'; i++)
 		;
-	nae = malloc(i + 1);
+	nae = malloc(++i);
 	if (!nae)
 		return (NULL);
 
 	for (j = 0; owner[j] != '\0'; j++)
 		;
-	ownr = malloc(j + 1);
+	ownr = malloc(++j);
 	if (!ownr)
 		return (NULL);
-
-	for (i = 0; name[i] != '\0'; i++)
-		nae[i] = name[i];
-	nae[i] = '\0';
-
-	for (j = 0; owner[j] != '\0'; j++)
-		ownr[j] = owner[j];
-	ownr[j] = '\0';
+	memset(ownr, 0, j);
+	memset(nae, 0, i);
+	strcpy(ownr, owner);
+	strcpy(nae, name);
 
 	ownr = owner;
 	new_dog = &ptr;
