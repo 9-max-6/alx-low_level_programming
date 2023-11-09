@@ -1,0 +1,1 @@
+#Variadic functions like printf()
