@@ -9,7 +9,7 @@
  * Return: success? Pointer to new string: NULL
  */
 
-char *argstostr(int ac, char **av)
+char *argstostr(int ac, char **avgit a)
 {
 	int i, j, len, bufint;
 	char *str;
@@ -21,7 +21,7 @@ char *argstostr(int ac, char **av)
 	len = bufint = 0;
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; av[j] != '\0'; j++)
+		for (j = 0; av[i][j] != '\0'; j++)
 		{
 			;
 		}
