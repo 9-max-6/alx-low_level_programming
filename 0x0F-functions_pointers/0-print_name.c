@@ -5,7 +5,7 @@
  * @name: the name to be printed
  * @f: the function to be invoked.
  */
-void print_name(char *name, void (*)(char *))
+void print_name(char *name, void (*f)(char *))
 {
 	if (!name)
 		return;
